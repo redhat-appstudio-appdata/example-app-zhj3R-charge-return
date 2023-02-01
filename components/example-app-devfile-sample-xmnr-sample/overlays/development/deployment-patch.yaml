@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: example-app-devfile-sample-xmnr-sample
+  namespace: khala-1-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:f14717a05c13acf4f242fc61246c570597b74d31e93a6dd64bc9e567be9edc81
+        name: container-image
+        resources: {}
+status: {}
