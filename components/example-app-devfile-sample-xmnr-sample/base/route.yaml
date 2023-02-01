@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: example-app-devfile-sample-xmnr-sample
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: example-app-devfile-sample-xmnr-sample
+    app.kubernetes.io/part-of: example-app
+  name: example-app-devfile-sample-xmnr-sample
+  namespace: khala-1-tenant
+spec:
+  port:
+    targetPort: 3001
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: example-app-devfile-sample-xmnr-sample
+    weight: 100
+status: {}
