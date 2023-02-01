@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: example-app-devfile-sample-xmnr-sample
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/user-workload:khala-1-tenant-example-app-devfile-sample-xmnr-sample
+      - image: quay.io/redhat-appstudio/user-workload@sha256:f14717a05c13acf4f242fc61246c570597b74d31e93a6dd64bc9e567be9edc81
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
